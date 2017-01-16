@@ -6,7 +6,7 @@ set -ex
 
 apt-get update
 
-apt-get install curl
+apt-get install -y curl alsa-utils
 
 curl -o /tmp/shairport-sync.deb $URL
 
