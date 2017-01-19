@@ -7,6 +7,6 @@ if [ -z "$CONFIGURATION_URL" ]; then
   exit 1
 fi
 
-curl -o /etc/shairport-sync.conf "$CONFIGURATION_URL"
+curl --fail --silent --show-error --location --output /etc/shairport-sync.conf "$CONFIGURATION_URL"
 
 exec /usr/bin/entry.sh "$@"

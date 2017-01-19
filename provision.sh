@@ -8,7 +8,7 @@ apt-get update
 
 apt-get install -y curl alsa-utils
 
-curl -o /tmp/shairport-sync.deb $URL
+curl --fail --silent --show-error --location --output /tmp/shairport-sync.deb "$URL"
 
 dpkg -i /tmp/shairport-sync.deb || true
 
