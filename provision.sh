@@ -1,7 +1,7 @@
 #!/bin/sh
 
-URL="https://s3-eu-west-1.amazonaws.com/airplayer/shairport-sync_2.8.4-1~bpo8%2B1raspbian_armhf.deb"
-CHECKSUM="a57e56593da769222834e3f65d1fbea4f119f53b96d27a61148d245a65213ed7"
+URL="https://s3-eu-west-1.amazonaws.com/airplayer/shairport-sync_3.0.2-1~exp1%2Braspbian-jessie_armhf.deb"
+CHECKSUM="be69ed5598327c8704f77b6558daf188ec51cb1c648360ba462a0df0fb723230"
 
 set -ex
 
