@@ -7,7 +7,13 @@ set -ex
 
 apt-get update
 
-apt-get install -y curl alsa-utils
+# Installation of utilities
+
+apt-get install -y alsa-utils
+
+# Installation of Shairport Sync
+
+apt-get install -y curl
 
 curl --fail --silent --show-error --location --output /tmp/shairport-sync.deb "$URL"
 
