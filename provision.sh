@@ -30,3 +30,5 @@ systemctl enable shairport-sync
 rm /tmp/shairport-sync.deb
 
 rm -rf /var/lib/apt/lists/*
+
+# Note: apt-get clean is already performed via /etc/apt/apt.conf.d/docker-clean.
