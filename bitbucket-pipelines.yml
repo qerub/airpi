@@ -1,0 +1,9 @@
+pipelines:
+  default:
+    - step:
+        name: resin/amd64-debian
+        script:
+          - docker build -f Dockerfile.amd64-debian -t airpi:$BITBUCKET_COMMIT .
+
+options:
+  docker: true
