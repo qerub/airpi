@@ -4,6 +4,10 @@ pipelines:
         name: resin/amd64-debian
         script:
           - docker build -f Dockerfile.amd64-debian -t airpi:$BITBUCKET_COMMIT .
+    - step:
+        name: resin/rpi-raspbian
+        script:
+          - git push -f $RESIN_USERNAME@git.resin.io:$RESIN_USERNAME/$RESIN_REPO.git HEAD
 
 options:
   docker: true
