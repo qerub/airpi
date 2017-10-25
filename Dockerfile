@@ -17,3 +17,5 @@ COPY entry.airpi.sh /usr/bin
 ENTRYPOINT ["/usr/bin/entry.airpi.sh"]
 
 ENV INITSYSTEM on
+
+CMD true
