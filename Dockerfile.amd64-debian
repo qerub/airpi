@@ -12,10 +12,6 @@ COPY --from=0 /tmp/shairport-sync.deb /tmp
 
 RUN /tmp/provision.sh && rm /tmp/provision.sh && rm /tmp/shairport-sync.deb
 
-COPY entry.airpi.sh /usr/bin
-
-ENTRYPOINT ["/usr/bin/entry.airpi.sh"]
-
 ENV INITSYSTEM on
 
 CMD true
