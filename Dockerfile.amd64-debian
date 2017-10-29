@@ -1,10 +1,10 @@
-FROM resin/amd64-debian:jessie
+FROM resin/amd64-debian:stretch
 
 COPY build-package.sh /tmp
 
 RUN /tmp/build-package.sh && rm /tmp/build-package.sh
 
-FROM resin/amd64-debian:jessie
+FROM resin/amd64-debian:stretch
 
 COPY provision.sh /tmp
 

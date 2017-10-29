@@ -14,12 +14,6 @@ case $DISTRO in
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
     # (Needed since we're grabbing Shairport Sync from Debian.)
     ;;
-  Debian)
-    echo deb http://ftp.debian.org/debian jessie-backports main > /etc/apt/sources.list.d/backports.list
-    apt-get update
-    apt-get -y install debhelper/jessie-backports dh-strip-nondeterminism/jessie-backports libfile-stripnondeterminism-perl/jessie-backports
-    # (Backports are already included with Raspbian, hence the discrepancy.)
-    ;;
 esac
 
 cd /tmp

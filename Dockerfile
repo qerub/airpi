@@ -1,10 +1,10 @@
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian:stretch
 
 COPY build-package.sh /tmp
 
 RUN /tmp/build-package.sh && rm /tmp/build-package.sh
 
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian:stretch
 
 COPY provision.sh /tmp
 
