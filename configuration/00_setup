@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -ex
+
+apt-get update
+
+dpkg -i /tmp/shairport-sync.deb || true
+
+apt-get -f install -y
+
+systemctl enable shairport-sync

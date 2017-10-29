@@ -6,11 +6,11 @@ RUN /tmp/build-package.sh && rm /tmp/build-package.sh
 
 FROM resin/amd64-debian:jessie
 
-COPY provision.sh /tmp
+COPY configuration /tmp/configuration
 
 COPY --from=0 /tmp/shairport-sync.deb /tmp
 
-RUN /tmp/provision.sh && rm /tmp/provision.sh && rm /tmp/shairport-sync.deb
+RUN run-parts -v --exit-on-error /tmp/configuration && rm -r /tmp/configuration && rm /tmp/shairport-sync.deb
 
 ENV INITSYSTEM on
 

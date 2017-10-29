@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -ex
+
+rm -rf /var/lib/apt/lists/*
+
+# Note: apt-get clean is already performed via /etc/apt/apt.conf.d/docker-clean.
