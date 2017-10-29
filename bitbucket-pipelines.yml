@@ -7,7 +7,7 @@ pipelines:
     - step:
         name: resin/rpi-raspbian
         script:
-          - git push -f $RESIN_USERNAME@git.resin.io:$RESIN_USERNAME/$RESIN_REPO.git HEAD
+          - git push -f $RESIN_USERNAME@git.resin.io:$RESIN_USERNAME/$RESIN_REPO.git HEAD:master
 
 options:
   docker: true
