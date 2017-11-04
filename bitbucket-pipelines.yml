@@ -3,7 +3,7 @@ pipelines:
     - step:
         name: resin/amd64-debian
         script:
-          - docker build -f Dockerfile.amd64-debian -t airpi:$BITBUCKET_COMMIT .
+          - TAG=$BITBUCKET_COMMIT make amd64-debian-image
     - step:
         name: resin/rpi-raspbian
         script:

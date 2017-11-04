@@ -12,4 +12,4 @@ before_install:
   - sudo apt-get -y install docker-ce
 
 script:
-  - docker build -f Dockerfile.amd64-debian -t airpi:$TRAVIS_COMMIT .
+  - TAG=$TRAVIS_COMMIT make amd64-debian-image
