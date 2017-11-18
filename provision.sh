@@ -10,9 +10,7 @@ apt-get install -y alsa-utils
 
 # Installation of Shairport Sync
 
-dpkg -i /tmp/shairport-sync.deb || true
-
-apt-get -f install -y
+apt-get install -y /tmp/shairport-sync.deb
 
 systemctl enable shairport-sync
 
